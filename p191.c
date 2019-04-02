@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+int n,a[100],b[100],c[100],i,j,k=0,l=0;
+scanf("%d",&n);
+for(i=0;i<n;i++)
+{
+scanf("%d",&a[i]);
+}
+for(j=0;j<n;j++)
+{
+scanf("%d",&b[j]);
+}
+for(i=n-1;i>=0;i--)
+{
+c[k]=a[i];
+k++;
+}
+for(j=0;j<n;j++)
+{
+for(k=j;k<n;k++)
+{
+if(b[j]==c[k])
+l++;
+}
+}
+if(n==l)
+printf("yes");
+else
+printf("no");
+}
